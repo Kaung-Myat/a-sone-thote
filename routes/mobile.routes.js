@@ -5,6 +5,7 @@ const zodiaData = require('../models/Zodiac.json');
 
 module.exports = function (app) {
     app.get('/api/myanmar-months', function (req, res) {
+        res.setHeader('Cache-Control', 'no-cache, no-store, must-revalidate');
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json({
             "status": 200,
